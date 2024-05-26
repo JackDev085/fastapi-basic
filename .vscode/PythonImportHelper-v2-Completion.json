@@ -1,0 +1,361 @@
+[
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_PATH",
+        "importPath": "makedb",
+        "description": "makedb",
+        "isExtraImport": true,
+        "detail": "makedb",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "infra.configs.base",
+        "description": "infra.configs.base",
+        "isExtraImport": true,
+        "detail": "infra.configs.base",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "infra.configs.base",
+        "description": "infra.configs.base",
+        "isExtraImport": true,
+        "detail": "infra.configs.base",
+        "documentation": {}
+    },
+    {
+        "label": "DBConnectionHandler",
+        "importPath": "infra.configs.connection",
+        "description": "infra.configs.connection",
+        "isExtraImport": true,
+        "detail": "infra.configs.connection",
+        "documentation": {}
+    },
+    {
+        "label": "DBConnectionHandler",
+        "importPath": "infra.configs.connection",
+        "description": "infra.configs.connection",
+        "isExtraImport": true,
+        "detail": "infra.configs.connection",
+        "documentation": {}
+    },
+    {
+        "label": "Exercicio",
+        "importPath": "infra.entities.exercicio",
+        "description": "infra.entities.exercicio",
+        "isExtraImport": true,
+        "detail": "infra.entities.exercicio",
+        "documentation": {}
+    },
+    {
+        "label": "Exercicio",
+        "importPath": "infra.entities.exercicio",
+        "description": "infra.entities.exercicio",
+        "isExtraImport": true,
+        "detail": "infra.entities.exercicio",
+        "documentation": {}
+    },
+    {
+        "label": "Treinos",
+        "importPath": "infra.entities.treinos",
+        "description": "infra.entities.treinos",
+        "isExtraImport": true,
+        "detail": "infra.entities.treinos",
+        "documentation": {}
+    },
+    {
+        "label": "Treinos",
+        "importPath": "infra.entities.treinos",
+        "description": "infra.entities.treinos",
+        "isExtraImport": true,
+        "detail": "infra.entities.treinos",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Jinja2Templates",
+        "importPath": "fastapi.templating",
+        "description": "fastapi.templating",
+        "isExtraImport": true,
+        "detail": "fastapi.templating",
+        "documentation": {}
+    },
+    {
+        "label": "TreinosRepository",
+        "importPath": "infra.repository.treinos_repository",
+        "description": "infra.repository.treinos_repository",
+        "isExtraImport": true,
+        "detail": "infra.repository.treinos_repository",
+        "documentation": {}
+    },
+    {
+        "label": "ExercicioRepository",
+        "importPath": "infra.repository.exercicios_repository",
+        "description": "infra.repository.exercicios_repository",
+        "isExtraImport": true,
+        "detail": "infra.repository.exercicios_repository",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "infra.configs.base",
+        "description": "infra.configs.base",
+        "peekOfCode": "Base = declarative_base()",
+        "detail": "infra.configs.base",
+        "documentation": {}
+    },
+    {
+        "label": "DBConnectionHandler",
+        "kind": 6,
+        "importPath": "infra.configs.connection",
+        "description": "infra.configs.connection",
+        "peekOfCode": "class DBConnectionHandler:\n  def __init__(self)-> None:\n    # self.__connection_string = \"mysql+pymysql://root:1234@localhost:3306/workout\"\n    self.__connection_string = \"sqlite:///teste.db\"\n    self.__engine = self.__create_database_engine()\n    self.session = None\n  def __create_database_engine(self):\n    engine = create_engine(self.__connection_string)\n    return engine\n  def get_engine(self):",
+        "detail": "infra.configs.connection",
+        "documentation": {}
+    },
+    {
+        "label": "Exercicio",
+        "kind": 6,
+        "importPath": "infra.entities.exercicio",
+        "description": "infra.entities.exercicio",
+        "peekOfCode": "class Exercicio(Base):\n    __tablename__ = \"exercicio\"\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    nome = Column(String(36), nullable=False)\n    repeticoes = Column(String(36), nullable=False)\n    link = Column(String(36), nullable=False)\n    treino_id = Column(Integer, ForeignKey(\"treino.id\"), nullable=False)\n    treino = relationship(\"Treinos\", backref=\"exercicios\", lazy=True)\n    def __repr__(self):\n        return f'Exercicio(nome={self.nome}, treino_id={self.treino_id}, repeticoes={self.repeticoes}, link={self.link})'",
+        "detail": "infra.entities.exercicio",
+        "documentation": {}
+    },
+    {
+        "label": "Treinos",
+        "kind": 6,
+        "importPath": "infra.entities.treinos",
+        "description": "infra.entities.treinos",
+        "peekOfCode": "class Treinos(Base):\n    __tablename__ = \"treino\"\n    id = Column(Integer, primary_key=True, autoincrement=True)\n    nome = Column(String(30), nullable=False)\n    def __repr__(self):\n        return f'Treino(nome={self.nome})'",
+        "detail": "infra.entities.treinos",
+        "documentation": {}
+    },
+    {
+        "label": "ExercicioRepository",
+        "kind": 6,
+        "importPath": "infra.repository.exercicios_repository",
+        "description": "infra.repository.exercicios_repository",
+        "peekOfCode": "class ExercicioRepository:\n  def select(self):\n    with DBConnectionHandler() as db:\n      data = db.session.query(Exercicio).all()\n      return data\n  def insert(self,treino_id,nome, repeticoes):\n    with DBConnectionHandler() as db:\n      try:\n        data_insert = Exercicio(treino_id=treino_id ,nome=nome, repeticoes=repeticoes)\n        db.session.add(data_insert)",
+        "detail": "infra.repository.exercicios_repository",
+        "documentation": {}
+    },
+    {
+        "label": "TreinosRepository",
+        "kind": 6,
+        "importPath": "infra.repository.treinos_repository",
+        "description": "infra.repository.treinos_repository",
+        "peekOfCode": "class TreinosRepository:\n  def select(self):\n    with DBConnectionHandler() as db:\n      data = db.session.query(Treinos).all()\n      return data\n  def insert(self, treino):\n    with DBConnectionHandler() as db:\n      try:\n        data_insert = Treinos(nome=treino.nome)\n        db.session.add(data_insert)",
+        "detail": "infra.repository.treinos_repository",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_PATH",
+        "kind": 5,
+        "importPath": "makedb",
+        "description": "makedb",
+        "peekOfCode": "ROOT_PATH = Path(__file__).resolve().parent\nconn = sqlite3.connect(ROOT_PATH/\"teste.db\")\ncursor = conn.cursor()\ncursor.execute(\"\"\"\nCREATE TABLE IF NOT EXISTS treino (\n  id INTEGER PRIMARY KEY AUTOINCREMENT,\n  nome VARCHAR(100) NOT NULL\n);\n\"\"\")\ncursor.execute(\"\"\"",
+        "detail": "makedb",
+        "documentation": {}
+    },
+    {
+        "label": "conn",
+        "kind": 5,
+        "importPath": "makedb",
+        "description": "makedb",
+        "peekOfCode": "conn = sqlite3.connect(ROOT_PATH/\"teste.db\")\ncursor = conn.cursor()\ncursor.execute(\"\"\"\nCREATE TABLE IF NOT EXISTS treino (\n  id INTEGER PRIMARY KEY AUTOINCREMENT,\n  nome VARCHAR(100) NOT NULL\n);\n\"\"\")\ncursor.execute(\"\"\"\nCREATE TABLE IF NOT EXISTS exercicio (",
+        "detail": "makedb",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "kind": 5,
+        "importPath": "makedb",
+        "description": "makedb",
+        "peekOfCode": "cursor = conn.cursor()\ncursor.execute(\"\"\"\nCREATE TABLE IF NOT EXISTS treino (\n  id INTEGER PRIMARY KEY AUTOINCREMENT,\n  nome VARCHAR(100) NOT NULL\n);\n\"\"\")\ncursor.execute(\"\"\"\nCREATE TABLE IF NOT EXISTS exercicio (\n  id INTEGER PRIMARY KEY AUTOINCREMENT,",
+        "detail": "makedb",
+        "documentation": {}
+    },
+    {
+        "label": "Treinos",
+        "kind": 6,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "class Treinos(BaseModel):\n  nome: str|None = None\n  id: int|None = None\nclass Exercicio(BaseModel):\n  id : int|None = None\n  nome : str|None = None\n  repeticoes : str|None = None\n  link : str|None = None\n  treino_id : int|None = None\ntemplates = Path(__file__).parent / \"templates\"",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "Exercicio",
+        "kind": 6,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "class Exercicio(BaseModel):\n  id : int|None = None\n  nome : str|None = None\n  repeticoes : str|None = None\n  link : str|None = None\n  treino_id : int|None = None\ntemplates = Path(__file__).parent / \"templates\"\ntemplates = Jinja2Templates(directory=\"templates\")\napp = FastAPI(title=\"Arielton Palmeirense\")\n@app.get(\"/\")",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "templates",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "templates = Path(__file__).parent / \"templates\"\ntemplates = Jinja2Templates(directory=\"templates\")\napp = FastAPI(title=\"Arielton Palmeirense\")\n@app.get(\"/\")\nasync def home(request: Request):\n    return templates.TemplateResponse(\"index.html\", {\"request\": request})\n@app.get(\"/treinos\")\nasync def busca_treinos():\n  repo = TreinosRepository()\n  data = repo.select()",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "templates",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "templates = Jinja2Templates(directory=\"templates\")\napp = FastAPI(title=\"Arielton Palmeirense\")\n@app.get(\"/\")\nasync def home(request: Request):\n    return templates.TemplateResponse(\"index.html\", {\"request\": request})\n@app.get(\"/treinos\")\nasync def busca_treinos():\n  repo = TreinosRepository()\n  data = repo.select()\n  return data ",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "app = FastAPI(title=\"Arielton Palmeirense\")\n@app.get(\"/\")\nasync def home(request: Request):\n    return templates.TemplateResponse(\"index.html\", {\"request\": request})\n@app.get(\"/treinos\")\nasync def busca_treinos():\n  repo = TreinosRepository()\n  data = repo.select()\n  return data \n@app.post(\"/treinos\")",
+        "detail": "run",
+        "documentation": {}
+    }
+]

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração do Projeto XYZ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        code {
+            display: block;
+            background: #eee;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 5px solid #ccc;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Web service básico</h1>
+        <h2>1. Configuração do Ambiente Virtual:</h2>
+        <p>Primeiramente, entre em um ambiente virtual de sua preferência. Você pode fazer isso utilizando um dos seguintes comandos:</p>
+        <code>python -m venv venv</code>
+        <p>ou</p>
+        <code>python3 -m venv venv</code>
+        
+        <h2>2. Instalação das Dependências:</h2>
+        <p>Antes de prosseguir, é importante instalar as dependências do projeto. Você pode fazer isso utilizando o comando:</p>
+        <code>pip install -r requirements.txt</code>
+        
+        <h2>3. Criação do Banco de Dados:</h2>
+        <p>Em seguida, execute o arquivo <code>makedb.py</code> para criar um banco de dados localmente nos arquivos. O banco de dados será criado em <code>./infra/configs/teste.db</code>. Utilize o seguinte comando:</p>
+        <code>python makedb.py</code>
+
+        <h2>4. Execução da Aplicação:</h2>
+        <p>Para executar a aplicação, você pode rodar o arquivo <code>run.py</code>. Isso iniciará a aplicação que estará pronta para receber solicitações. Utilize o seguinte comando:</p>
+        <code>python run.py</code>
+        
+        <h2>5. Inicialização do Servidor FastAPI:</h2>
+        <p>Após iniciar a aplicação, execute o seguinte comando para iniciar o servidor FastAPI:</p>
+        <code>uvicorn run:app --reload</code>
+        
+        <h2>6. Acesso à Interface da Aplicação:</h2>
+        <p>Uma vez que o servidor esteja em execução, você pode acessar a tela inicial da aplicação digitando o seguinte URL em seu navegador:</p>
+        <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>
+        
+        <h2>7. Acesso à Documentação da API:</h2>
+        <p>Para analisar a documentação da API e entender como a aplicação funciona, acesse o seguinte URL:</p>
+        <a href="http://127.0.0.1:8000/docs">http://127.0.0.1:8000/docs</a>
+    </div>
+</body>
+</html>
