@@ -8,9 +8,10 @@ class TreinosRepository:
       return data
     
   def insert(self, treino):
+    data = (treino.nome,)
     with DBConnectionHandler() as db:
       try:
-        data_insert = Treinos(nome=treino.nome)
+        data_insert = Treinos(nome=data[0])
         db.session.add(data_insert)
         db.session.commit()
       except Exception:

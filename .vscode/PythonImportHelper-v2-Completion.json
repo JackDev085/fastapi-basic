@@ -201,6 +201,14 @@
         "documentation": {}
     },
     {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "Jinja2Templates",
         "importPath": "fastapi.templating",
         "description": "fastapi.templating",
@@ -230,6 +238,15 @@
         "description": "pydantic",
         "isExtraImport": true,
         "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "uvicorn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uvicorn",
+        "description": "uvicorn",
+        "detail": "uvicorn",
         "documentation": {}
     },
     {
@@ -282,7 +299,7 @@
         "kind": 6,
         "importPath": "infra.repository.treinos_repository",
         "description": "infra.repository.treinos_repository",
-        "peekOfCode": "class TreinosRepository:\n  def select(self):\n    with DBConnectionHandler() as db:\n      data = db.session.query(Treinos).all()\n      return data\n  def insert(self, treino):\n    with DBConnectionHandler() as db:\n      try:\n        data_insert = Treinos(nome=treino.nome)\n        db.session.add(data_insert)",
+        "peekOfCode": "class TreinosRepository:\n  def select(self):\n    with DBConnectionHandler() as db:\n      data = db.session.query(Treinos).all()\n      return data\n  def insert(self, treino):\n    data = (treino.nome,)\n    with DBConnectionHandler() as db:\n      try:\n        data_insert = Treinos(nome=data[0])",
         "detail": "infra.repository.treinos_repository",
         "documentation": {}
     },
@@ -318,7 +335,16 @@
         "kind": 6,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "class Treinos(BaseModel):\n  nome: str|None = None\n  id: int|None = None\nclass Exercicio(BaseModel):\n  id : int|None = None\n  nome : str|None = None\n  repeticoes : str|None = None\n  link : str|None = None\n  treino_id : int|None = None\ntemplates = Path(__file__).parent / \"templates\"",
+        "peekOfCode": "class Treinos(BaseModel):\n  nome: str|None = None\n  id: int|None = None\nclass TreinosNoId(BaseModel):\n  nome: str\nclass Exercicio(BaseModel):\n  id : int|None = None\n  nome : str|None = None\n  repeticoes : str|None = None\n  link : str|None = None",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "TreinosNoId",
+        "kind": 6,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "class TreinosNoId(BaseModel):\n  nome: str\nclass Exercicio(BaseModel):\n  id : int|None = None\n  nome : str|None = None\n  repeticoes : str|None = None\n  link : str|None = None\n  treino_id : int|None = None\ntemplates = Path(__file__).parent / \"templates\"\ntemplates = Jinja2Templates(directory=\"templates\")",
         "detail": "run",
         "documentation": {}
     },
@@ -327,25 +353,16 @@
         "kind": 6,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "class Exercicio(BaseModel):\n  id : int|None = None\n  nome : str|None = None\n  repeticoes : str|None = None\n  link : str|None = None\n  treino_id : int|None = None\ntemplates = Path(__file__).parent / \"templates\"\ntemplates = Jinja2Templates(directory=\"templates\")\napp = FastAPI(title=\"Arielton Palmeirense\")\n@app.get(\"/\")",
+        "peekOfCode": "class Exercicio(BaseModel):\n  id : int|None = None\n  nome : str|None = None\n  repeticoes : str|None = None\n  link : str|None = None\n  treino_id : int|None = None\ntemplates = Path(__file__).parent / \"templates\"\ntemplates = Jinja2Templates(directory=\"templates\")\n@app.get(\"/\")\nasync def home(request: Request):",
         "detail": "run",
         "documentation": {}
     },
     {
-        "label": "templates",
+        "label": "router",
         "kind": 5,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "templates = Path(__file__).parent / \"templates\"\ntemplates = Jinja2Templates(directory=\"templates\")\napp = FastAPI(title=\"Arielton Palmeirense\")\n@app.get(\"/\")\nasync def home(request: Request):\n    return templates.TemplateResponse(\"index.html\", {\"request\": request})\n@app.get(\"/treinos\")\nasync def busca_treinos():\n  repo = TreinosRepository()\n  data = repo.select()",
-        "detail": "run",
-        "documentation": {}
-    },
-    {
-        "label": "templates",
-        "kind": 5,
-        "importPath": "run",
-        "description": "run",
-        "peekOfCode": "templates = Jinja2Templates(directory=\"templates\")\napp = FastAPI(title=\"Arielton Palmeirense\")\n@app.get(\"/\")\nasync def home(request: Request):\n    return templates.TemplateResponse(\"index.html\", {\"request\": request})\n@app.get(\"/treinos\")\nasync def busca_treinos():\n  repo = TreinosRepository()\n  data = repo.select()\n  return data ",
+        "peekOfCode": "router = APIRouter(prefix=\"/v1\")\napp = FastAPI(\n  title=\"Nome do Projeto\",\n  description=\"Descrição do projeto\",\n  version=\"0.1.0\",\n  openapi_url=\"/openapi.json\"  # Isso altera o caminho do OpenAPI\n  )\nclass Treinos(BaseModel):\n  nome: str|None = None\n  id: int|None = None",
         "detail": "run",
         "documentation": {}
     },
@@ -354,7 +371,25 @@
         "kind": 5,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "app = FastAPI(title=\"Arielton Palmeirense\")\n@app.get(\"/\")\nasync def home(request: Request):\n    return templates.TemplateResponse(\"index.html\", {\"request\": request})\n@app.get(\"/treinos\")\nasync def busca_treinos():\n  repo = TreinosRepository()\n  data = repo.select()\n  return data \n@app.post(\"/treinos\")",
+        "peekOfCode": "app = FastAPI(\n  title=\"Nome do Projeto\",\n  description=\"Descrição do projeto\",\n  version=\"0.1.0\",\n  openapi_url=\"/openapi.json\"  # Isso altera o caminho do OpenAPI\n  )\nclass Treinos(BaseModel):\n  nome: str|None = None\n  id: int|None = None\nclass TreinosNoId(BaseModel):",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "templates",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "templates = Path(__file__).parent / \"templates\"\ntemplates = Jinja2Templates(directory=\"templates\")\n@app.get(\"/\")\nasync def home(request: Request):\n    return templates.TemplateResponse(\"index.html\", {\"request\": request})\n@app.get(\"/treinos\")\nasync def busca_treinos():\n  repo = TreinosRepository()\n  data = repo.select()\n  return data ",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "templates",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "templates = Jinja2Templates(directory=\"templates\")\n@app.get(\"/\")\nasync def home(request: Request):\n    return templates.TemplateResponse(\"index.html\", {\"request\": request})\n@app.get(\"/treinos\")\nasync def busca_treinos():\n  repo = TreinosRepository()\n  data = repo.select()\n  return data \n@app.post(\"/treinos\")",
         "detail": "run",
         "documentation": {}
     }

@@ -1,4 +1,4 @@
-from fastapi import FastAPI,Request
+from fastapi import FastAPI,Request,APIRouter
 from fastapi.templating import Jinja2Templates
 from infra.repository.treinos_repository import TreinosRepository
 from infra.repository.exercicios_repository import ExercicioRepository
@@ -6,10 +6,21 @@ from pathlib import Path
 from infra.entities.treinos import Treinos
 from infra.entities.exercicio import Exercicio
 from pydantic import BaseModel
+import uvicorn
 
+router = APIRouter(prefix="/v1")
+app = FastAPI(
+  title="Nome do Projeto",
+  description="Descrição do projeto",
+  version="0.1.0",
+  openapi_url="/openapi.json"  # Isso altera o caminho do OpenAPI
+  )
 class Treinos(BaseModel):
   nome: str|None = None
   id: int|None = None
+  
+class TreinosNoId(BaseModel):
+  nome: str
   
 class Exercicio(BaseModel):
   id : int|None = None
@@ -21,7 +32,6 @@ class Exercicio(BaseModel):
 
 templates = Path(__file__).parent / "templates"
 templates = Jinja2Templates(directory="templates")
-app = FastAPI(title="Arielton Palmeirense")
 
 @app.get("/")
 async def home(request: Request):
@@ -34,9 +44,12 @@ async def busca_treinos():
   return data 
 
 @app.post("/treinos")
-async def insere_treino(treino: Treinos):
+async def insere_treino(treino: TreinosNoId):
   repo = TreinosRepository()
-  repo.insert(treino)
+  try:
+    repo.insert(treino)
+  except Exception as e:
+    return {"message":str(e)}
   return {"message":"Treino criado com sucesso"}
 
 
@@ -81,3 +94,8 @@ async def deleta_exercicio(id:int):
   repo = TreinosRepository()
   repo.delete(id)
   return {"message":"Exercício deletado com sucesso"}
+
+#Caso queira rodar o servidor com o uvicorn sem precisar rodar o comando no terminal
+
+# if __name__ == "__main__":
+#   uvicorn.run(app,port=8000)
